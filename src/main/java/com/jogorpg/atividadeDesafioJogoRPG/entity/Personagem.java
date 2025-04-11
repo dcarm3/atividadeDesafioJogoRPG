@@ -25,10 +25,8 @@ public class Personagem {
     @OneToMany(mappedBy = "personagem", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ItemMagico> itensMagicos = new ArrayList<ItemMagico>();
 
-    // Construtores
     public Personagem() {}
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -78,7 +76,6 @@ public class Personagem {
         this.itensMagicos = itensMagicos;
     }
 
-    // Métodos auxiliares para adicionar ou remover itens
     public void adicionarItem(ItemMagico item) {
         this.itensMagicos.add(item);
         item.setPersonagem(this);
@@ -89,7 +86,6 @@ public class Personagem {
         item.setPersonagem(null);
     }
 
-    // Métodos para obter força e defesa total (base + itens)
     public int getForcaTotal() {
         int total = forcaBase;
         for (ItemMagico item : itensMagicos) {

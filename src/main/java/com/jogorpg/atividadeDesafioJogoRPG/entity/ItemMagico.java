@@ -21,10 +21,8 @@ public class ItemMagico {
     @JoinColumn(name = "personagem_id")
     private Personagem personagem;
 
-    // Construtores
     public ItemMagico() {}
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
