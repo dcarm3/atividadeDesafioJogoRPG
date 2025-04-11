@@ -12,5 +12,6 @@ import java.util.Optional;
 public interface ItemMagicoRepository extends JpaRepository<ItemMagico, Long> {
     List<ItemMagico> findByPersonagemId(Long personagemId);
     Optional<ItemMagico> findByPersonagemIdAndTipo(Long personagemId, TipoDoItem tipo);
+
 }
 
