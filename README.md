@@ -1,6 +1,7 @@
 ## Atividade Desafio profissional
 Sistema de jogo de rpg feito em spring
 
+obs: a classe e o tipo do item precisam estar em maiusculo pra funcionar
 ## Endpoints criados
 
 ### 1. Cadastrar Personagem
@@ -12,7 +13,7 @@ Sistema de jogo de rpg feito em spring
 {
   "nome": "daniel",
   "nomeAventureiro": "daniel herói",
-  "classe": "Guerreiro",
+  "classe": "GUERREIRO",
   "level": 1,
   "forcaBase": 5,
   "defesaBase": 5
@@ -29,7 +30,7 @@ Sistema de jogo de rpg feito em spring
 ```json
 {
   "nome": "Exxxcalibuurrr",
-  "tipo": "Arma",
+  "tipo": "ARMA",
   "forca": 5,
   "defesa": 0
 }
@@ -101,7 +102,7 @@ Sistema de jogo de rpg feito em spring
 ### 11. Remover Item Mágico do Personagem
 - **Método:** `DELETE`
 - **URL:** `/personagens/{personagemId}/itens/{itemId}`
-- **Descrição:** remove um item de algum personagem, mas o item ainda existe no sistema
+- **Descrição:** remove um item de algum personagem
 
 ---
 
