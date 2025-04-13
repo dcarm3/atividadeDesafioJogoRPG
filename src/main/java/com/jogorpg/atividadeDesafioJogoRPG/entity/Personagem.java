@@ -1,5 +1,6 @@
 package com.jogorpg.atividadeDesafioJogoRPG.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ public class Personagem {
     private int defesaBase;
 
     @OneToMany(mappedBy = "personagem", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<ItemMagico> itensMagicos = new ArrayList<ItemMagico>();
 
     public Personagem() {}

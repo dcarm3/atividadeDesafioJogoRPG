@@ -1,5 +1,6 @@
 package com.jogorpg.atividadeDesafioJogoRPG.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,6 +20,7 @@ public class ItemMagico {
 
     @ManyToOne
     @JoinColumn(name = "personagem_id")
+    @JsonBackReference
     private Personagem personagem;
 
     public ItemMagico() {}
