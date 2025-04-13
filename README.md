@@ -1,6 +1,7 @@
 ## Atividade Desafio profissional
 Sistema de jogo de rpg feito em spring
 
+obs: a classe precisa estar em maiusculo pra funcionar
 ## Endpoints criados
 
 ### 1. Cadastrar Personagem
@@ -18,7 +19,7 @@ Sistema de jogo de rpg feito em spring
   "defesaBase": 5
 }
 ```
-obs: a classe precisa estar em maiusculo pra funcionar
+
 ---
 
 ### 2. Cadastrar Item Mágico
