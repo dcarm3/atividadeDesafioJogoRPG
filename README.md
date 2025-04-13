@@ -12,13 +12,13 @@ Sistema de jogo de rpg feito em spring
 {
   "nome": "daniel",
   "nomeAventureiro": "daniel herói",
-  "classe": "Guerreiro",
+  "classe": "GUERREIRO",
   "level": 1,
   "forcaBase": 5,
   "defesaBase": 5
 }
 ```
-
+obs: a classe precisa estar em maiusculo pra funcionar
 ---
 
 ### 2. Cadastrar Item Mágico
