@@ -24,7 +24,7 @@ obs: a classe e o tipo do item precisam estar em maiusculo pra funcionar
 
 ### 2. Cadastrar Item Mágico
 - **Método:** `POST`
-- **URL:** `/itens`
+- **URL:** `/itens/personagem/{personagemId}`
 - **Descrição:** cria um novo item magico
 - **Body Exemplo (JSON):**
 ```json
