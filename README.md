@@ -1,7 +1,7 @@
 ## Atividade Desafio profissional
 Sistema de jogo de rpg feito em spring
 
-obs: a classe precisa estar em maiusculo pra funcionar
+obs: a classe e o tipo do item precisam estar em maiusculo pra funcionar
 ## Endpoints criados
 
 ### 1. Cadastrar Personagem
@@ -30,7 +30,7 @@ obs: a classe precisa estar em maiusculo pra funcionar
 ```json
 {
   "nome": "Exxxcalibuurrr",
-  "tipo": "Arma",
+  "tipo": "ARMA",
   "forca": 5,
   "defesa": 0
 }
