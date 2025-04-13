@@ -1,5 +1,5 @@
 ## Atividade Desafio profissional
-## Sistema de jogo de rpg feito em spring
+Sistema de jogo de rpg feito em spring
 
 ## Endpoints criados
 
