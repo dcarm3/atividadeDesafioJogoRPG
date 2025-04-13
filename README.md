@@ -102,7 +102,7 @@ obs: a classe e o tipo do item precisam estar em maiusculo pra funcionar
 ### 11. Remover Item Mágico do Personagem
 - **Método:** `DELETE`
 - **URL:** `/personagens/{personagemId}/itens/{itemId}`
-- **Descrição:** remove um item de algum personagem, mas o item ainda existe no sistema
+- **Descrição:** remove um item de algum personagem
 
 ---
 
