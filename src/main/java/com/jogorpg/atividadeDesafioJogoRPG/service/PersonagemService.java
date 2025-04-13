@@ -16,7 +16,7 @@ public class PersonagemService {
     public Personagem criarPersonagem(Personagem personagem) {
         int total = personagem.getForcaBase() + personagem.getDefesaBase();
         if (total > 10) {
-            throw new RuntimeException("A soma de Força e Defesa base não pode ultrapassar 10.");
+            throw new RuntimeException("soma de força e defesa nao podem passar de 10");
         }
         return personagemRepository.save(personagem);
     }
@@ -28,7 +28,7 @@ public class PersonagemService {
     public Personagem buscarPorId(Long id) {
         Optional<Personagem> p = personagemRepository.findById(id);
         if (!p.isPresent()){
-            throw new RuntimeException("Personagem não encontrado com ID: " + id);
+            throw new RuntimeException("Personagem " + id + " não encontrado");
         }
         return p.get();
     }

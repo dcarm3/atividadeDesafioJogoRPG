@@ -21,30 +21,30 @@ public class ItemMagicoService {
 
     public ItemMagico adicionarItemAoPersonagem(Long personagemId, ItemMagico item) {
         if (item.getForca() == 0 && item.getDefesa() == 0) {
-            throw new RuntimeException("Item deve ter pelo menos um atributo diferente de zero.");
+            throw new RuntimeException("o itemm deve ter pelo menos um atributo diferente de zero 👌");
         }
         if (item.getTipo() == TipoDoItem.ARMA && item.getDefesa() != 0) {
-            throw new RuntimeException("Item do tipo ARMA deve ter defesa igual a zero.");
+            throw new RuntimeException("arma deve ter defesa 0 🫡");
         }
         if (item.getTipo() == TipoDoItem.ARMADURA && item.getForca() != 0) {
-            throw new RuntimeException("Item do tipo ARMADURA deve ter força igual a zero.");
+            throw new RuntimeException("armadura deve ter força 0 🫡");
         }
         if (item.getTipo() == TipoDoItem.AMULETO) {
             if (item.getForca() > 10 || item.getDefesa() > 10) {
-                throw new RuntimeException("Atributos do Amuleto não podem ser maiores que 10.");
+                throw new RuntimeException("Amuleto não pode ter atributo maior q 10");
             }
         }
 
         Optional<Personagem> op = personagemRepository.findById(personagemId);
         if (!op.isPresent()) {
-            throw new RuntimeException("Personagem não encontrado com ID: " + personagemId);
+            throw new RuntimeException("Personagem " + personagemId + "não foi encontrado :(");
         }
         Personagem personagem = op.get();
 
         if (item.getTipo() == TipoDoItem.AMULETO) {
             Optional<ItemMagico> amuletoExistente = itemMagicoRepository.findByPersonagemIdAndTipo(personagemId, TipoDoItem.AMULETO);
             if (amuletoExistente.isPresent()) {
-                throw new RuntimeException("Personagem já possui um Amuleto.");
+                throw new RuntimeException("Esse personagem ja tem um amuleto");
             }
         }
 
@@ -61,7 +61,7 @@ public class ItemMagicoService {
     public ItemMagico buscarPorId(Long id) {
         Optional<ItemMagico> item = itemMagicoRepository.findById(id);
         if (!item.isPresent()){
-            throw new RuntimeException("Item Mágico não encontrado com ID: " + id);
+            throw new RuntimeException("Item Mágico " + id + " não foi encontrado");
         }
         return item.get();
     }
@@ -83,7 +83,7 @@ public class ItemMagicoService {
     public ItemMagico buscarAmuleto(Long personagemId) {
         Optional<ItemMagico> amuleto = itemMagicoRepository.findByPersonagemIdAndTipo(personagemId, TipoDoItem.AMULETO);
         if (!amuleto.isPresent()){
-            throw new RuntimeException("Amuleto não encontrado para o Personagem com ID: " + personagemId);
+            throw new RuntimeException("Amuleto não foi encontradfo para o personagem " + personagemId);
         }
         return amuleto.get();
     }
